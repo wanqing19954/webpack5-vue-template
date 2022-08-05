@@ -17,15 +17,14 @@ import { formatStats } from './utils/formatStatus.js'
 const { DefinePlugin } = webpack
 const _dirname = fileURLToPath(import.meta.url)
 
-// process.env.NODE_ENV = 'production'
+const isProd = process.env.NODE_ENV === 'production'
+
 const root = path.resolve(_dirname, '..', '..')
 const srcDir = path.resolve(root, 'src')
 const distDir = path.resolve(root, 'dist')
-console.log('distDir', distDir)
 
 const webpackConfig = {
-	mode: 'development',
-	devtool: 'source-map',
+	mode: 'production',
 	entry: {
 		app: ['./src/main.js']
 	},
@@ -67,7 +66,7 @@ const webpackConfig = {
 				test: /\.m?jsx?$/,
 				use: [
 					{
-						loader: 'babel-loader?cacheDirectory=true',
+						loader: 'babel-loader',
 					}
 				]
 			},
@@ -115,26 +114,28 @@ const webpackConfig = {
 			},
 			minSize: 0
 		},
-		minimizer: [
-			new TerserPlugin({
-				terserOptions: {},
-				parallel: true,
-				extractComments: false
-			}),
-			// optimize-css-asset-webpack-plugin优化版，支持缓存和并行模式
-			new CssMinimizerPlugin({
-				parallel: true,
-				minimizerOptions: {
-					preset: [
-						'default',
-						{
-							mergeLonghand: false,
-							cssDeclarationSorter: false
+		minimizer: isProd
+			? [
+					new TerserPlugin({
+						terserOptions: {},
+						parallel: true,
+						extractComments: false
+					}),
+					// optimize-css-asset-webpack-plugin优化版，支持缓存和并行模式
+					new CssMinimizerPlugin({
+						parallel: true,
+						minimizerOptions: {
+							preset: [
+								'default',
+								{
+									mergeLonghand: false,
+									cssDeclarationSorter: false
+								}
+							]
 						}
-					]
-				}
-			})
-		]
+					})
+			  ]
+			: false
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
@@ -181,16 +182,24 @@ const webpackConfig = {
 }
 
 webpack(webpackConfig, (err, stats) => {
-	if (err || stats.hasErrors()) {
-		console.log('err', err)
-		console.log(stats.hasErrors())
+	if (err) {
+		throw(err)
+	}
+	if (stats.hasErrors()) {
+		console.log('stats', stats)
 		throw new Error('Build failed with errors.')
 	}
-	log(formatStats(stats, distDir))
+	if (isProd) {
+		log(formatStats(stats, distDir))
 
-	done(`Build complete. The dist directory is ready to be deployed.`)
+		done(`Build complete. The dist directory is ready to be deployed.`)
 
-	info(`Check out deployment instructions at ${chalk.cyan(`https://cli.vuejs.org/guide/deployment.html`)}\n`)
+		info(
+			`Check out deployment instructions at ${chalk.cyan(
+				`https://cli.vuejs.org/guide/deployment.html`
+			)}\n`
+		)
 
-	console.log('Build complete.')
+		console.log('Build complete.')
+	}
 })

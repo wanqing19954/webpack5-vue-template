@@ -32,7 +32,7 @@ export default {
 		this.a = add7(1, 2)
 		this.a = add8(1, 2)
 		this.a = add9(1, 2)
-		this.a = arr1.includes(3) && 1
+		this.a = arr1.includes(3) && 2
 	}
 }
 </script>
