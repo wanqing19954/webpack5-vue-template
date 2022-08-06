@@ -12,7 +12,6 @@ export const formatStats = (stats, dir) => {
 		chunks: false
 	})
   
-  fs.writeFileSync(path.join(dir, './index.json'), JSON.stringify(json), 'utf-8')
 
 	let assets = json.assets
 		? json.assets

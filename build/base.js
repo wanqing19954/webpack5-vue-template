@@ -20,6 +20,8 @@ export const publicDir = path.resolve(root, 'public')
 
 export const getBaseConfig = (isProd = false) => {
 	const webpackConfig = {
+		infrastructureLogging: { level: 'error' },
+		stats: 'errors-only',
 		cache: {
 			// 开启持久化缓存
 			type: 'filesystem',

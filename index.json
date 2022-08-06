@@ -1,0 +1,3108 @@
+{
+	"compiler": {
+		"hooks": {
+			"initialize": {
+				"_args": [],
+				"taps": [{ "type": "sync", "name": "HtmlWebpackPlugin" }],
+				"interceptors": [],
+				"_x": [null]
+			},
+			"shouldEmit": { "_args": ["compilation"], "taps": [], "interceptors": [] },
+			"done": {
+				"_args": ["stats"],
+				"taps": [
+					{ "type": "sync", "name": "WebpackBar:done" },
+					{ "type": "sync", "name": "CaseSensitivePathsPlugin" },
+					{ "type": "sync", "name": "IdleFileCachePlugin" },
+					{ "type": "sync", "name": "webpack-dev-server" },
+					{ "type": "sync", "name": "webpack-dev-middleware" }
+				],
+				"interceptors": [
+					{ "name": "ProgressPlugin" },
+					{ "name": "ProgressPlugin" },
+					{ "name": "ProgressPlugin" },
+					{ "name": "ProgressPlugin" }
+				]
+			},
+			"afterDone": {
+				"_args": ["stats"],
+				"taps": [{ "type": "sync", "name": "MemoryWithGcCachePlugin" }],
+				"interceptors": []
+			},
+			"additionalPass": { "_args": [], "taps": [], "interceptors": [] },
+			"beforeRun": {
+				"_args": ["compiler"],
+				"taps": [{ "type": "sync", "name": "NodeEnvironmentPlugin" }],
+				"interceptors": [
+					{ "name": "ProgressPlugin" },
+					{ "name": "ProgressPlugin" },
+					{ "name": "ProgressPlugin" },
+					{ "name": "ProgressPlugin" }
+				]
+			},
+			"run": {
+				"_args": ["compiler"],
+				"taps": [],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+			},
+			"emit": {
+				"_args": ["compilation"],
+				"taps": [],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+			},
+			"assetEmitted": { "_args": ["file", "info"], "taps": [], "interceptors": [] },
+			"afterEmit": {
+				"_args": ["compilation"],
+				"taps": [],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+			},
+			"thisCompilation": {
+				"_args": ["compilation", "params"],
+				"taps": [
+					{ "type": "sync", "name": "CopyPlugin" },
+					{ "type": "sync", "name": "ArrayPushCallbackChunkFormatPlugin" },
+					{ "type": "sync", "name": "JsonpChunkLoadingPlugin" },
+					{ "type": "sync", "name": "StartupChunkDependenciesPlugin" },
+					{ "type": "sync", "name": "ImportScriptsChunkLoadingPlugin" },
+					{ "type": "sync", "name": "FetchCompileWasmPlugin" },
+					{ "type": "sync", "name": "FetchCompileAsyncWasmPlugin" },
+					{ "type": "sync", "name": "WorkerPlugin" },
+					{ "type": "sync", "name": "SplitChunksPlugin" },
+					{ "type": "sync", "name": "ResolverCachePlugin" },
+					{ "type": "sync", "name": "HtmlWebpackPlugin" }
+				],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }],
+				"_x": [null, null, null, null, null, null, null, null, null, null, null]
+			},
+			"compilation": {
+				"_args": ["compilation", "params"],
+				"taps": [
+					{ "type": "sync", "name": "ProgressPlugin" },
+					{ "type": "sync", "name": "vue-loader-plugin" },
+					{ "type": "sync", "name": "DefinePlugin" },
+					{ "type": "sync", "name": "ChunkPrefetchPreloadPlugin" },
+					{ "type": "sync", "name": "ModuleInfoHeaderPlugin" },
+					{ "type": "sync", "name": "EvalDevToolModulePlugin" },
+					{ "type": "sync", "name": "JavascriptModulesPlugin" },
+					{ "type": "sync", "name": "JsonModulesPlugin" },
+					{ "type": "sync", "name": "AssetModulesPlugin" },
+					{ "type": "sync", "name": "EntryPlugin" },
+					{ "type": "sync", "name": "RuntimePlugin" },
+					{ "type": "sync", "name": "InferAsyncModulesPlugin" },
+					{ "type": "sync", "name": "DataUriPlugin" },
+					{ "type": "sync", "name": "FileUriPlugin" },
+					{ "type": "sync", "name": "CompatibilityPlugin" },
+					{ "type": "sync", "name": "HarmonyModulesPlugin" },
+					{ "type": "sync", "name": "AMDPlugin" },
+					{ "type": "sync", "name": "RequireJsStuffPlugin" },
+					{ "type": "sync", "name": "CommonJsPlugin" },
+					{ "type": "sync", "name": "LoaderPlugin" },
+					{ "type": "sync", "name": "LoaderPlugin" },
+					{ "type": "sync", "name": "NodeStuffPlugin" },
+					{ "type": "sync", "name": "APIPlugin" },
+					{ "type": "sync", "name": "ExportsInfoApiPlugin" },
+					{ "type": "sync", "name": "WebpackIsIncludedPlugin" },
+					{ "type": "sync", "name": "ConstPlugin" },
+					{ "type": "sync", "name": "UseStrictPlugin" },
+					{ "type": "sync", "name": "RequireIncludePlugin" },
+					{ "type": "sync", "name": "RequireEnsurePlugin" },
+					{ "type": "sync", "name": "RequireContextPlugin" },
+					{ "type": "sync", "name": "ImportPlugin" },
+					{ "type": "sync", "name": "RequireContextPlugin" },
+					{ "type": "sync", "name": "SystemPlugin" },
+					{ "type": "sync", "name": "ImportMetaPlugin" },
+					{ "type": "sync", "name": "URLPlugin" },
+					{ "type": "sync", "name": "DefaultStatsFactoryPlugin" },
+					{ "type": "sync", "name": "DefaultStatsPresetPlugin" },
+					{ "type": "sync", "name": "DefaultStatsPrinterPlugin" },
+					{ "type": "sync", "name": "JavascriptMetaInfoPlugin" },
+					{ "type": "sync", "name": "EnsureChunkConditionsPlugin" },
+					{ "type": "sync", "name": "RemoveEmptyChunksPlugin" },
+					{ "type": "sync", "name": "MergeDuplicateChunksPlugin" },
+					{ "type": "sync", "name": "SideEffectsFlagPlugin" },
+					{ "type": "sync", "name": "FlagDependencyExportsPlugin" },
+					{ "type": "sync", "name": "NamedModuleIdsPlugin" },
+					{ "type": "sync", "name": "NamedChunkIdsPlugin" },
+					{ "type": "sync", "name": "DefinePlugin" },
+					{ "type": "sync", "name": "TemplatedPathPlugin" },
+					{ "type": "sync", "name": "RecordIdsPlugin" },
+					{ "type": "sync", "name": "WarnCaseSensitiveModulesPlugin" },
+					{ "type": "sync", "name": "AddBuildDependenciesPlugin" },
+					{ "type": "sync", "name": "AddBuildDependenciesPlugin" },
+					{ "type": "sync", "name": "EntryPlugin" },
+					{ "type": "sync", "name": "EntryPlugin" },
+					{ "type": "sync", "name": "ProvidePlugin" },
+					{ "type": "sync", "name": "HotModuleReplacementPlugin" },
+					{ "type": "sync", "name": "ProgressPlugin" }
+				],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }],
+				"_x": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"normalModuleFactory": {
+				"_args": ["normalModuleFactory"],
+				"taps": [{ "type": "sync", "name": "CaseSensitivePathsPlugin" }],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }],
+				"_x": [null]
+			},
+			"contextModuleFactory": {
+				"_args": ["contextModuleFactory"],
+				"taps": [],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }],
+				"_x": []
+			},
+			"beforeCompile": {
+				"_args": ["params"],
+				"taps": [
+					{ "type": "sync", "name": "ProgressPlugin" },
+					{ "type": "sync", "name": "ProgressPlugin" }
+				],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }],
+				"_x": [null, null]
+			},
+			"compile": {
+				"_args": ["params"],
+				"taps": [
+					{ "type": "sync", "name": "WebpackBar:compile" },
+					{ "type": "sync", "name": "ExternalsPlugin" }
+				],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }],
+				"_x": [null, null]
+			},
+			"make": {
+				"_args": ["compilation"],
+				"taps": [
+					{ "type": "async", "name": "EntryPlugin" },
+					{ "type": "async", "name": "PersistentChildCompilerSingletonPlugin" },
+					{ "type": "async", "name": "EntryPlugin" },
+					{ "type": "async", "name": "EntryPlugin" }
+				],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }],
+				"_x": [null, null, null, null]
+			},
+			"finishMake": {
+				"_args": ["compilation"],
+				"taps": [],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+			},
+			"afterCompile": {
+				"_args": ["compilation"],
+				"taps": [
+					{ "type": "promise", "name": "ProgressPlugin" },
+					{ "type": "promise", "name": "ProgressPlugin" }
+				],
+				"interceptors": []
+			},
+			"readRecords": { "_args": [], "taps": [], "interceptors": [] },
+			"emitRecords": { "_args": [], "taps": [], "interceptors": [] },
+			"watchRun": {
+				"_args": ["compiler"],
+				"taps": [{ "type": "sync", "name": "webpack-dev-middleware" }],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }],
+				"_x": [null]
+			},
+			"failed": { "_args": ["error"], "taps": [], "interceptors": [] },
+			"invalid": {
+				"_args": ["filename", "changeTime"],
+				"taps": [
+					{ "type": "sync", "name": "WebpackBar:invalid" },
+					{ "type": "sync", "name": "webpack-dev-server" },
+					{ "type": "sync", "name": "webpack-dev-middleware" }
+				],
+				"interceptors": []
+			},
+			"watchClose": {
+				"_args": [],
+				"taps": [],
+				"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+			},
+			"shutdown": { "_args": [], "taps": [], "interceptors": [] },
+			"infrastructureLog": {
+				"_args": ["origin", "type", "args"],
+				"taps": [],
+				"interceptors": [],
+				"_x": []
+			},
+			"environment": { "_args": [], "taps": [], "interceptors": [], "_x": [] },
+			"afterEnvironment": { "_args": [], "taps": [], "interceptors": [], "_x": [] },
+			"afterPlugins": {
+				"_args": ["compiler"],
+				"taps": [{ "type": "sync", "name": "WebpackBar:afterPlugins" }],
+				"interceptors": [],
+				"_x": [null]
+			},
+			"afterResolvers": { "_args": ["compiler"], "taps": [], "interceptors": [], "_x": [] },
+			"entryOption": {
+				"_args": ["context", "entry"],
+				"taps": [{ "type": "sync", "name": "EntryOptionPlugin" }],
+				"interceptors": [],
+				"_x": [null]
+			}
+		},
+		"outputPath": "/Users/weidian/test/vue-webpack/dist",
+		"watching": {
+			"startTime": 1659795428975,
+			"invalid": false,
+			"callbacks": [],
+			"closed": false,
+			"suspended": false,
+			"blocked": false,
+			"watchOptions": { "aggregateTimeout": 20 },
+			"running": true,
+			"_initial": false,
+			"_invalidReported": false,
+			"_needRecords": false,
+			"lastWatcherStartTime": 1659795428975
+		},
+		"outputFileSystem": {
+			"F_OK": 0,
+			"R_OK": 4,
+			"W_OK": 2,
+			"X_OK": 1,
+			"constants": {
+				"O_RDONLY": 0,
+				"O_WRONLY": 1,
+				"O_RDWR": 2,
+				"S_IFMT": 61440,
+				"S_IFREG": 32768,
+				"S_IFDIR": 16384,
+				"S_IFCHR": 8192,
+				"S_IFBLK": 24576,
+				"S_IFIFO": 4096,
+				"S_IFLNK": 40960,
+				"S_IFSOCK": 49152,
+				"O_CREAT": 64,
+				"O_EXCL": 128,
+				"O_NOCTTY": 256,
+				"O_TRUNC": 512,
+				"O_APPEND": 1024,
+				"O_DIRECTORY": 65536,
+				"O_NOATIME": 262144,
+				"O_NOFOLLOW": 131072,
+				"O_SYNC": 1052672,
+				"O_DIRECT": 16384,
+				"O_NONBLOCK": 2048,
+				"S_IRWXU": 448,
+				"S_IRUSR": 256,
+				"S_IWUSR": 128,
+				"S_IXUSR": 64,
+				"S_IRWXG": 56,
+				"S_IRGRP": 32,
+				"S_IWGRP": 16,
+				"S_IXGRP": 8,
+				"S_IRWXO": 7,
+				"S_IROTH": 4,
+				"S_IWOTH": 2,
+				"S_IXOTH": 1,
+				"F_OK": 0,
+				"R_OK": 4,
+				"W_OK": 2,
+				"X_OK": 1,
+				"UV_FS_SYMLINK_DIR": 1,
+				"UV_FS_SYMLINK_JUNCTION": 2,
+				"UV_FS_COPYFILE_EXCL": 1,
+				"UV_FS_COPYFILE_FICLONE": 2,
+				"UV_FS_COPYFILE_FICLONE_FORCE": 4,
+				"COPYFILE_EXCL": 1,
+				"COPYFILE_FICLONE": 2,
+				"COPYFILE_FICLONE_FORCE": 4
+			},
+			"promises": {}
+		},
+		"intermediateFileSystem": {
+			"F_OK": 0,
+			"R_OK": 4,
+			"W_OK": 2,
+			"X_OK": 1,
+			"constants": {
+				"UV_FS_SYMLINK_DIR": 1,
+				"UV_FS_SYMLINK_JUNCTION": 2,
+				"O_RDONLY": 0,
+				"O_WRONLY": 1,
+				"O_RDWR": 2,
+				"UV_DIRENT_UNKNOWN": 0,
+				"UV_DIRENT_FILE": 1,
+				"UV_DIRENT_DIR": 2,
+				"UV_DIRENT_LINK": 3,
+				"UV_DIRENT_FIFO": 4,
+				"UV_DIRENT_SOCKET": 5,
+				"UV_DIRENT_CHAR": 6,
+				"UV_DIRENT_BLOCK": 7,
+				"S_IFMT": 61440,
+				"S_IFREG": 32768,
+				"S_IFDIR": 16384,
+				"S_IFCHR": 8192,
+				"S_IFBLK": 24576,
+				"S_IFIFO": 4096,
+				"S_IFLNK": 40960,
+				"S_IFSOCK": 49152,
+				"O_CREAT": 512,
+				"O_EXCL": 2048,
+				"UV_FS_O_FILEMAP": 0,
+				"O_NOCTTY": 131072,
+				"O_TRUNC": 1024,
+				"O_APPEND": 8,
+				"O_DIRECTORY": 1048576,
+				"O_NOFOLLOW": 256,
+				"O_SYNC": 128,
+				"O_DSYNC": 4194304,
+				"O_SYMLINK": 2097152,
+				"O_NONBLOCK": 4,
+				"S_IRWXU": 448,
+				"S_IRUSR": 256,
+				"S_IWUSR": 128,
+				"S_IXUSR": 64,
+				"S_IRWXG": 56,
+				"S_IRGRP": 32,
+				"S_IWGRP": 16,
+				"S_IXGRP": 8,
+				"S_IRWXO": 7,
+				"S_IROTH": 4,
+				"S_IWOTH": 2,
+				"S_IXOTH": 1,
+				"F_OK": 0,
+				"R_OK": 4,
+				"W_OK": 2,
+				"X_OK": 1,
+				"UV_FS_COPYFILE_EXCL": 1,
+				"COPYFILE_EXCL": 1,
+				"UV_FS_COPYFILE_FICLONE": 2,
+				"COPYFILE_FICLONE": 2,
+				"UV_FS_COPYFILE_FICLONE_FORCE": 4,
+				"COPYFILE_FICLONE_FORCE": 4
+			},
+			"promises": {}
+		},
+		"inputFileSystem": {
+			"_lstatBackend": {
+				"_duration": 60000,
+				"_activeAsyncOperations": {},
+				"_data": {},
+				"_levels": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"_currentLevel": 0,
+				"_tickInterval": 500,
+				"_mode": 0
+			},
+			"_statBackend": {
+				"_duration": 60000,
+				"_activeAsyncOperations": {},
+				"_data": {},
+				"_levels": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"_currentLevel": 0,
+				"_tickInterval": 500,
+				"_mode": 0
+			},
+			"_readdirBackend": {
+				"_duration": 60000,
+				"_activeAsyncOperations": {},
+				"_data": {},
+				"_levels": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"_currentLevel": 0,
+				"_tickInterval": 500,
+				"_mode": 0
+			},
+			"_readFileBackend": {
+				"_duration": 60000,
+				"_activeAsyncOperations": {},
+				"_data": {},
+				"_levels": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"_currentLevel": 0,
+				"_tickInterval": 500,
+				"_mode": 0
+			},
+			"_readJsonBackend": {
+				"_duration": 60000,
+				"_activeAsyncOperations": {},
+				"_data": {},
+				"_levels": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"_currentLevel": 0,
+				"_tickInterval": 500,
+				"_mode": 0
+			},
+			"_readlinkBackend": {
+				"_duration": 60000,
+				"_activeAsyncOperations": {},
+				"_data": {},
+				"_levels": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"_currentLevel": 0,
+				"_tickInterval": 500,
+				"_mode": 0
+			}
+		},
+		"watchFileSystem": {
+			"watcherOptions": { "aggregateTimeout": 0 },
+			"watcher": {
+				"_events": {},
+				"_eventsCount": 0,
+				"aggregateTimeout": 0,
+				"watcherOptions": { "followSymlinks": false },
+				"watcherManager": { "directoryWatchers": {} },
+				"fileWatchers": {},
+				"directoryWatchers": {},
+				"_missing": {},
+				"paused": false,
+				"aggregatedChanges": {},
+				"aggregatedRemovals": {}
+			}
+		},
+		"recordsInputPath": null,
+		"recordsOutputPath": null,
+		"records": { "HtmlWebpackCompiler": [{}] },
+		"managedPaths": {},
+		"immutablePaths": {},
+		"fsStartTime": 1659795428975,
+		"resolverFactory": {
+			"hooks": {
+				"resolveOptions": { "_map": {}, "_interceptors": [] },
+				"resolver": { "_map": {}, "_interceptors": [{}] }
+			},
+			"cache": {}
+		},
+		"options": {
+			"cache": {
+				"type": "filesystem",
+				"allowCollectingMemory": true,
+				"maxMemoryGenerations": 5,
+				"maxAge": 5184000000,
+				"profile": false,
+				"buildDependencies": {
+					"config": ["/Users/weidian/test/vue-webpack/build/base.js"],
+					"defaultWebpack": [
+						"/Users/weidian/test/vue-webpack/node_modules/.pnpm/webpack@5.74.0_webpack-cli@4.10.0/node_modules/webpack/lib/"
+					]
+				},
+				"cacheDirectory": "/Users/weidian/test/vue-webpack/node_modules/.cache/webpack",
+				"cacheLocation": "/Users/weidian/test/vue-webpack/node_modules/.cache/webpack/default-development",
+				"hashAlgorithm": "md4",
+				"compression": false,
+				"idleTimeout": 60000,
+				"idleTimeoutForInitialStore": 5000,
+				"idleTimeoutAfterLargeChanges": 1000,
+				"name": "default-development",
+				"store": "pack",
+				"version": "",
+				"memoryCacheUnaffected": false
+			},
+			"context": "/Users/weidian/test/vue-webpack",
+			"devServer": {
+				"static": { "directory": "/Users/weidian/test/vue-webpack/public" },
+				"compress": true,
+				"client": {
+					"logging": "none",
+					"overlay": { "errors": true, "warnings": false },
+					"progress": true,
+					"webSocketURL": {},
+					"reconnect": 10
+				}
+			},
+			"devtool": "eval",
+			"entry": { "app": { "import": ["/Users/weidian/test/vue-webpack/src/main.js"] } },
+			"experiments": {
+				"futureDefaults": false,
+				"backCompat": true,
+				"topLevelAwait": false,
+				"syncWebAssembly": false,
+				"asyncWebAssembly": false,
+				"outputModule": false,
+				"layers": false,
+				"cacheUnaffected": false
+			},
+			"externalsPresets": {
+				"web": true,
+				"node": false,
+				"nwjs": false,
+				"electron": false,
+				"electronMain": false,
+				"electronPreload": false,
+				"electronRenderer": false
+			},
+			"externalsType": "var",
+			"infrastructureLogging": {
+				"level": "error",
+				"stream": {
+					"connecting": false,
+					"_hadError": false,
+					"_parent": null,
+					"_host": null,
+					"_readableState": {
+						"objectMode": false,
+						"highWaterMark": 16384,
+						"buffer": { "head": null, "tail": null, "length": 0 },
+						"length": 0,
+						"pipes": [],
+						"flowing": null,
+						"ended": false,
+						"endEmitted": false,
+						"reading": false,
+						"constructed": true,
+						"sync": true,
+						"needReadable": false,
+						"emittedReadable": false,
+						"readableListening": false,
+						"resumeScheduled": false,
+						"errorEmitted": false,
+						"emitClose": false,
+						"autoDestroy": true,
+						"destroyed": false,
+						"errored": null,
+						"closed": false,
+						"closeEmitted": false,
+						"defaultEncoding": "utf8",
+						"awaitDrainWriters": null,
+						"multiAwaitDrain": false,
+						"readingMore": false,
+						"dataEmitted": false,
+						"decoder": null,
+						"encoding": null,
+						"readable": false
+					},
+					"_events": {},
+					"_eventsCount": 1,
+					"_writableState": {
+						"objectMode": false,
+						"highWaterMark": 16384,
+						"finalCalled": false,
+						"needDrain": false,
+						"ending": false,
+						"ended": false,
+						"finished": false,
+						"destroyed": false,
+						"decodeStrings": false,
+						"defaultEncoding": "utf8",
+						"length": 0,
+						"writing": false,
+						"corked": 0,
+						"sync": false,
+						"bufferProcessing": false,
+						"writecb": null,
+						"writelen": 0,
+						"afterWriteTickInfo": null,
+						"buffered": [],
+						"bufferedIndex": 0,
+						"allBuffers": true,
+						"allNoop": true,
+						"pendingcb": 0,
+						"constructed": true,
+						"prefinished": false,
+						"errorEmitted": false,
+						"emitClose": false,
+						"autoDestroy": true,
+						"errored": null,
+						"closed": false,
+						"closeEmitted": false
+					},
+					"allowHalfOpen": false,
+					"_sockname": null,
+					"_pendingData": null,
+					"_pendingEncoding": "",
+					"server": null,
+					"_server": null,
+					"columns": 92,
+					"rows": 5,
+					"_type": "tty",
+					"fd": 2,
+					"_isStdio": true
+				},
+				"debug": false,
+				"colors": true,
+				"appendOnly": false
+			},
+			"loader": { "target": "web" },
+			"mode": "development",
+			"module": {
+				"noParse": {},
+				"parser": {
+					"javascript": {
+						"unknownContextRequest": ".",
+						"unknownContextRegExp": false,
+						"unknownContextRecursive": true,
+						"unknownContextCritical": true,
+						"exprContextRequest": ".",
+						"exprContextRegExp": false,
+						"exprContextRecursive": true,
+						"exprContextCritical": true,
+						"wrappedContextRegExp": {},
+						"wrappedContextRecursive": true,
+						"wrappedContextCritical": false,
+						"strictThisContextOnImports": false,
+						"importMeta": true,
+						"dynamicImportMode": "lazy",
+						"dynamicImportPrefetch": false,
+						"dynamicImportPreload": false,
+						"createRequire": false
+					},
+					"asset": { "dataUrlCondition": { "maxSize": 8096 } }
+				},
+				"generator": {},
+				"defaultRules": [
+					{ "mimetype": "application/node", "type": "javascript/auto" },
+					{ "test": {}, "type": "json" },
+					{ "mimetype": "application/json", "type": "json" },
+					{
+						"test": {},
+						"type": "javascript/esm",
+						"resolve": { "byDependency": { "esm": { "fullySpecified": true } } }
+					},
+					{
+						"test": {},
+						"descriptionData": { "type": "module" },
+						"type": "javascript/esm"
+					},
+					{ "test": {}, "type": "javascript/dynamic" },
+					{
+						"test": {},
+						"descriptionData": { "type": "commonjs" },
+						"type": "javascript/dynamic"
+					},
+					{
+						"mimetype": { "or": ["text/javascript", "application/javascript"] },
+						"type": "javascript/esm"
+					},
+					{
+						"dependency": "url",
+						"oneOf": [
+							{ "scheme": {}, "type": "asset/inline" },
+							{ "type": "asset/resource" }
+						]
+					},
+					{ "assert": { "type": "json" }, "type": "json" }
+				],
+				"rules": [
+					{
+						"loader": "/Users/weidian/test/vue-webpack/node_modules/.pnpm/vue-loader@15.10.0_5249e485cd8da83f6eb2165e9ef69098/node_modules/vue-loader/lib/loaders/pitcher.js",
+						"options": {}
+					},
+					{ "resolve": { "fullySpecified": false }, "use": [] },
+					{
+						"use": [
+							{
+								"loader": "babel-loader",
+								"options": { "cacheCompression": false, "cacheDirectory": true },
+								"ident": "clonedRuleSet-2.use"
+							}
+						],
+						"exclude": {}
+					},
+					{
+						"loader": "/Users/weidian/test/vue-webpack/node_modules/.pnpm/vue-loader@15.10.0_5249e485cd8da83f6eb2165e9ef69098/node_modules/vue-loader/lib/loaders/templateLoader.js",
+						"options": { "compilerOptions": { "whitespace": "condense" } }
+					},
+					{ "use": [] },
+					{ "use": [{ "loader": "babel-loader", "ident": "clonedRuleSet-2.use" }] },
+					{
+						"type": "asset",
+						"generator": { "filename": "img/[name].[hash:8][ext]" },
+						"use": []
+					},
+					{
+						"type": "asset",
+						"generator": { "filename": "fonts/[name].[hash:8][ext]" },
+						"use": []
+					},
+					{
+						"use": [
+							{ "loader": "vue-style-loader" },
+							{ "loader": "css-loader" },
+							{ "loader": "postcss-loader" }
+						]
+					},
+					{
+						"use": [
+							{ "loader": "vue-style-loader" },
+							{ "loader": "css-loader" },
+							{ "loader": "postcss-loader" },
+							{ "loader": "sass-loader" }
+						]
+					},
+					{
+						"test": {},
+						"use": [{ "loader": "vue-loader", "ident": "vue-loader-options" }]
+					},
+					{ "test": {} },
+					{ "test": {} },
+					{ "test": {}, "type": "asset" },
+					{ "test": {}, "type": "asset" },
+					{ "test": {} },
+					{ "test": {} }
+				]
+			},
+			"node": { "global": true, "__filename": "mock", "__dirname": "mock" },
+			"optimization": {
+				"realContentHash": false,
+				"splitChunks": {
+					"cacheGroups": {
+						"defaultVendors": {
+							"name": "chunk-vendors",
+							"test": {},
+							"priority": -10,
+							"chunks": "initial"
+						},
+						"common": {
+							"name": "chunk-common",
+							"minChunks": 2,
+							"priority": -20,
+							"chunks": "initial",
+							"reuseExistingChunk": true
+						},
+						"default": {
+							"idHint": "",
+							"reuseExistingChunk": true,
+							"minChunks": 2,
+							"priority": -20
+						}
+					},
+					"defaultSizeTypes": ["javascript", "unknown"],
+					"hidePathInfo": false,
+					"chunks": "async",
+					"usedExports": false,
+					"minChunks": 1,
+					"minSize": 10000,
+					"minRemainingSize": 0,
+					"enforceSizeThreshold": 30000,
+					"maxAsyncRequests": null,
+					"maxInitialRequests": null,
+					"automaticNameDelimiter": "-"
+				},
+				"minimizer": [
+					{
+						"options": {
+							"test": {},
+							"extractComments": false,
+							"parallel": true,
+							"terserOptions": {}
+						}
+					},
+					{
+						"options": {
+							"test": {},
+							"parallel": true,
+							"minimizer": {
+								"options": {
+									"preset": [
+										"default",
+										{ "mergeLonghand": false, "cssDeclarationSorter": false }
+									]
+								}
+							}
+						}
+					}
+				],
+				"runtimeChunk": false,
+				"emitOnErrors": true,
+				"removeAvailableModules": false,
+				"removeEmptyChunks": true,
+				"mergeDuplicateChunks": true,
+				"flagIncludedChunks": false,
+				"moduleIds": "named",
+				"chunkIds": "named",
+				"sideEffects": "flag",
+				"providedExports": true,
+				"usedExports": false,
+				"innerGraph": false,
+				"mangleExports": false,
+				"concatenateModules": false,
+				"checkWasmTypes": false,
+				"mangleWasmImports": false,
+				"portableRecords": false,
+				"minimize": false,
+				"nodeEnv": "development"
+			},
+			"output": {
+				"assetModuleFilename": "[hash][ext][query]",
+				"asyncChunks": true,
+				"charset": true,
+				"chunkFilename": "js/[name].js",
+				"chunkFormat": "array-push",
+				"chunkLoading": "jsonp",
+				"chunkLoadingGlobal": "webpackChunkwebpack5_vue_template",
+				"chunkLoadTimeout": 120000,
+				"cssFilename": "js/[name].css",
+				"cssChunkFilename": "js/[name].css",
+				"compareBeforeEmit": true,
+				"crossOriginLoading": false,
+				"devtoolNamespace": "webpack5-vue-template",
+				"environment": {
+					"arrowFunction": false,
+					"const": false,
+					"destructuring": false,
+					"forOf": false,
+					"bigIntLiteral": false,
+					"dynamicImport": false,
+					"module": false
+				},
+				"enabledChunkLoadingTypes": ["jsonp", "import-scripts"],
+				"enabledLibraryTypes": [],
+				"enabledWasmLoadingTypes": ["fetch"],
+				"filename": "js/[name].js",
+				"globalObject": "self",
+				"hashDigest": "hex",
+				"hashDigestLength": 20,
+				"hashFunction": "md4",
+				"hotUpdateChunkFilename": "[id].[fullhash].hot-update.js",
+				"hotUpdateGlobal": "webpackHotUpdatewebpack5_vue_template",
+				"hotUpdateMainFilename": "[runtime].[fullhash].hot-update.json",
+				"iife": true,
+				"importFunctionName": "import",
+				"importMetaName": "import.meta",
+				"scriptType": false,
+				"module": false,
+				"path": "/Users/weidian/test/vue-webpack/dist",
+				"pathinfo": true,
+				"publicPath": "/",
+				"sourceMapFilename": "[file].map[query]",
+				"strictModuleExceptionHandling": false,
+				"uniqueName": "webpack5-vue-template",
+				"wasmLoading": "fetch",
+				"webassemblyModuleFilename": "[hash].module.wasm",
+				"workerChunkLoading": "import-scripts",
+				"workerWasmLoading": "fetch",
+				"strictModuleErrorHandling": true
+			},
+			"parallelism": 100,
+			"performance": false,
+			"plugins": [
+				{
+					"profile": false,
+					"modulesCount": 5000,
+					"dependenciesCount": 10000,
+					"showEntries": true,
+					"showModules": true,
+					"showDependencies": true,
+					"showActiveModules": true,
+					"options": {
+						"name": "webpack",
+						"color": "green",
+						"reporters": ["fancy"],
+						"reporter": null
+					},
+					"reporters": [{}]
+				},
+				{},
+				{
+					"definitions": {
+						"process.env": { "NODE_ENV": "\"development\"", "BASE_URL": "\"/\"" }
+					}
+				},
+				{
+					"userOptions": {
+						"title": "Index Page",
+						"scriptLoading": "defer",
+						"chunks": ["chunk-vendors", "chunk-common", "app"],
+						"template": "public/index.html",
+						"filename": "index.html"
+					},
+					"version": 5,
+					"options": {
+						"template": "public/index.html",
+						"templateContent": false,
+						"filename": "index.html",
+						"publicPath": "auto",
+						"hash": false,
+						"inject": "head",
+						"scriptLoading": "defer",
+						"compile": true,
+						"favicon": false,
+						"minify": "auto",
+						"cache": true,
+						"showErrors": true,
+						"excludeChunks": [],
+						"chunksSortMode": "auto",
+						"meta": {},
+						"base": false,
+						"title": "Index Page",
+						"xhtml": false
+					}
+				},
+				{
+					"options": {},
+					"logger": {},
+					"pathCache": {},
+					"fsOperations": 0,
+					"primed": false
+				},
+				{
+					"patterns": [
+						{
+							"from": "/Users/weidian/test/vue-webpack/public",
+							"to": "/Users/weidian/test/vue-webpack/dist",
+							"toType": "dir",
+							"noErrorOnMissing": true,
+							"globOptions": {
+								"ignore": [
+									"**/.DS_Store",
+									"/Users/weidian/test/vue-webpack/public/index.html"
+								]
+							},
+							"info": { "minimized": true }
+						}
+					],
+					"options": {}
+				}
+			],
+			"profile": false,
+			"recordsInputPath": false,
+			"recordsOutputPath": false,
+			"resolve": {
+				"byDependency": {
+					"wasm": {
+						"conditionNames": ["import", "module", "..."],
+						"aliasFields": ["browser"],
+						"mainFields": ["browser", "module", "..."]
+					},
+					"esm": {
+						"conditionNames": ["import", "module", "..."],
+						"aliasFields": ["browser"],
+						"mainFields": ["browser", "module", "..."]
+					},
+					"loaderImport": {
+						"conditionNames": ["import", "module", "..."],
+						"aliasFields": ["browser"],
+						"mainFields": ["browser", "module", "..."]
+					},
+					"worker": {
+						"conditionNames": ["import", "module", "..."],
+						"aliasFields": ["browser"],
+						"mainFields": ["browser", "module", "..."],
+						"preferRelative": true
+					},
+					"commonjs": {
+						"conditionNames": ["require", "module", "..."],
+						"aliasFields": ["browser"],
+						"mainFields": ["browser", "module", "..."]
+					},
+					"amd": {
+						"conditionNames": ["require", "module", "..."],
+						"aliasFields": ["browser"],
+						"mainFields": ["browser", "module", "..."]
+					},
+					"loader": {
+						"conditionNames": ["require", "module", "..."],
+						"aliasFields": ["browser"],
+						"mainFields": ["browser", "module", "..."]
+					},
+					"unknown": {
+						"conditionNames": ["require", "module", "..."],
+						"aliasFields": ["browser"],
+						"mainFields": ["browser", "module", "..."]
+					},
+					"undefined": {
+						"conditionNames": ["require", "module", "..."],
+						"aliasFields": ["browser"],
+						"mainFields": ["browser", "module", "..."]
+					},
+					"url": { "preferRelative": true }
+				},
+				"cache": true,
+				"modules": ["node_modules"],
+				"conditionNames": ["webpack", "development", "browser"],
+				"mainFiles": ["index"],
+				"extensions": [".js", ".mjs", ".jsx", ".vue", ".json", ".wasm"],
+				"aliasFields": [],
+				"exportsFields": ["exports"],
+				"roots": ["/Users/weidian/test/vue-webpack"],
+				"mainFields": ["main"],
+				"alias": {
+					"@": "/Users/weidian/test/vue-webpack/src",
+					"vue$": "vue/dist/vue.runtime.esm.js"
+				}
+			},
+			"resolveLoader": {
+				"cache": true,
+				"conditionNames": ["loader", "require", "node"],
+				"exportsFields": ["exports"],
+				"mainFields": ["loader", "main"],
+				"extensions": [".js"],
+				"mainFiles": ["index"]
+			},
+			"snapshot": {
+				"resolveBuildDependencies": { "timestamp": true, "hash": true },
+				"buildDependencies": { "timestamp": true, "hash": true },
+				"resolve": { "timestamp": true },
+				"module": { "timestamp": true },
+				"immutablePaths": [],
+				"managedPaths": ["/Users/weidian/test/vue-webpack/node_modules/"]
+			},
+			"stats": { "preset": "errors-only" },
+			"target": "browserslist",
+			"watch": false,
+			"watchOptions": {}
+		},
+		"context": "/Users/weidian/test/vue-webpack",
+		"requestShortener": {},
+		"cache": {
+			"hooks": {
+				"get": {
+					"_args": ["identifier", "etag", "gotHandlers"],
+					"taps": [
+						{ "type": "sync", "name": "MemoryWithGcCachePlugin", "stage": -10 },
+						{ "type": "promise", "name": "IdleFileCachePlugin", "stage": 10 }
+					],
+					"interceptors": [],
+					"_x": [null, null]
+				},
+				"store": {
+					"_args": ["identifier", "etag", "data"],
+					"taps": [
+						{ "type": "sync", "name": "MemoryWithGcCachePlugin", "stage": -10 },
+						{ "type": "sync", "name": "IdleFileCachePlugin", "stage": 10 }
+					],
+					"interceptors": []
+				},
+				"storeBuildDependencies": {
+					"_args": ["dependencies"],
+					"taps": [{ "type": "sync", "name": "IdleFileCachePlugin", "stage": 10 }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"beginIdle": {
+					"_args": [],
+					"taps": [{ "type": "sync", "name": "IdleFileCachePlugin", "stage": 10 }],
+					"interceptors": [
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" }
+					]
+				},
+				"endIdle": {
+					"_args": [],
+					"taps": [{ "type": "sync", "name": "IdleFileCachePlugin", "stage": 10 }],
+					"interceptors": [
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" }
+					]
+				},
+				"shutdown": {
+					"_args": [],
+					"taps": [
+						{ "type": "sync", "name": "MemoryWithGcCachePlugin", "stage": -10 },
+						{ "type": "promise", "name": "IdleFileCachePlugin", "stage": 10 }
+					],
+					"interceptors": [
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" }
+					]
+				}
+			}
+		},
+		"compilerPath": "",
+		"running": true,
+		"idle": false,
+		"watchMode": true,
+		"_backCompat": true,
+		"_lastCompilation": {
+			"_backCompat": true,
+			"hooks": {
+				"buildModule": {
+					"_args": ["module"],
+					"taps": [{ "type": "sync", "name": "ProgressPlugin" }],
+					"interceptors": []
+				},
+				"rebuildModule": {
+					"_args": ["module"],
+					"taps": [{ "type": "sync", "name": "FlagDependencyExportsPlugin" }],
+					"interceptors": []
+				},
+				"failedModule": { "_args": ["module", "error"], "taps": [], "interceptors": [] },
+				"succeedModule": { "_args": ["module"], "taps": [], "interceptors": [] },
+				"stillValidModule": { "_args": ["module"], "taps": [], "interceptors": [] },
+				"addEntry": {
+					"_args": ["entry", "options"],
+					"taps": [
+						{ "type": "sync", "name": "ProgressPlugin" },
+						{ "type": "sync", "name": "ProgressPlugin" }
+					],
+					"interceptors": [],
+					"_x": [null, null]
+				},
+				"failedEntry": {
+					"_args": ["entry", "options", "error"],
+					"taps": [
+						{ "type": "sync", "name": "ProgressPlugin" },
+						{ "type": "sync", "name": "ProgressPlugin" }
+					],
+					"interceptors": []
+				},
+				"succeedEntry": {
+					"_args": ["entry", "options", "module"],
+					"taps": [
+						{ "type": "sync", "name": "ProgressPlugin" },
+						{ "type": "sync", "name": "ProgressPlugin" }
+					],
+					"interceptors": []
+				},
+				"dependencyReferencedExports": {
+					"_args": ["referencedExports", "dependency", "runtime"],
+					"taps": [],
+					"interceptors": []
+				},
+				"executeModule": {
+					"_args": ["options", "context"],
+					"taps": [
+						{ "type": "sync", "name": "JavascriptModulesPlugin" },
+						{ "type": "sync", "name": "JavascriptModulesPlugin" }
+					],
+					"interceptors": []
+				},
+				"prepareModuleExecution": {
+					"_args": ["options", "context"],
+					"taps": [{ "type": "sync", "name": "AssetModulesPlugin" }],
+					"interceptors": []
+				},
+				"finishModules": {
+					"_args": ["modules"],
+					"taps": [
+						{ "type": "sync", "name": "ResolverCachePlugin" },
+						{ "type": "sync", "name": "InferAsyncModulesPlugin" },
+						{ "type": "async", "name": "FlagDependencyExportsPlugin" }
+					],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"finishRebuildingModule": {
+					"_args": ["module"],
+					"taps": [{ "type": "sync", "name": "FlagDependencyExportsPlugin" }],
+					"interceptors": []
+				},
+				"unseal": {
+					"_args": [],
+					"taps": [{ "type": "sync", "name": "SplitChunksPlugin" }],
+					"interceptors": []
+				},
+				"seal": {
+					"_args": [],
+					"taps": [{ "type": "sync", "name": "WarnCaseSensitiveModulesPlugin" }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"beforeChunks": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterChunks": {
+					"_args": ["chunks"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"optimizeDependencies": {
+					"_args": ["modules"],
+					"taps": [{ "type": "sync", "name": "SideEffectsFlagPlugin", "stage": 0 }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterOptimizeDependencies": {
+					"_args": ["modules"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"optimize": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"optimizeModules": {
+					"_args": ["modules"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterOptimizeModules": {
+					"_args": ["modules"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"optimizeChunks": {
+					"_args": ["chunks", "chunkGroups"],
+					"taps": [
+						{ "type": "sync", "name": "EnsureChunkConditionsPlugin", "stage": -10 },
+						{ "type": "sync", "name": "RemoveEmptyChunksPlugin", "stage": -10 },
+						{ "type": "sync", "name": "MergeDuplicateChunksPlugin", "stage": -10 },
+						{ "type": "sync", "name": "SplitChunksPlugin", "stage": 10 },
+						{ "type": "sync", "name": "RemoveEmptyChunksPlugin", "stage": 10 }
+					],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterOptimizeChunks": {
+					"_args": ["chunks", "chunkGroups"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"optimizeTree": {
+					"_args": ["chunks", "modules"],
+					"taps": [
+						{ "type": "async", "name": "PersistentChildCompilerSingletonPlugin" }
+					],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterOptimizeTree": {
+					"_args": ["chunks", "modules"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"optimizeChunkModules": {
+					"_args": ["chunks", "modules"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterOptimizeChunkModules": {
+					"_args": ["chunks", "modules"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"shouldRecord": { "_args": [], "taps": [], "interceptors": [] },
+				"additionalChunkRuntimeRequirements": {
+					"_args": ["chunk", "runtimeRequirements", "context"],
+					"taps": [
+						{ "type": "sync", "name": "ArrayPushCallbackChunkFormatPlugin" },
+						{ "type": "sync", "name": "ChunkPrefetchPreloadPlugin" }
+					],
+					"interceptors": []
+				},
+				"runtimeRequirementInChunk": { "_map": {}, "_interceptors": [] },
+				"additionalModuleRuntimeRequirements": {
+					"_args": ["module", "runtimeRequirements", "context"],
+					"taps": [],
+					"interceptors": []
+				},
+				"runtimeRequirementInModule": { "_map": {}, "_interceptors": [] },
+				"additionalTreeRuntimeRequirements": {
+					"_args": ["chunk", "runtimeRequirements", "context"],
+					"taps": [
+						{ "type": "sync", "name": "StartupChunkDependenciesPlugin" },
+						{ "type": "sync", "name": "ChunkPrefetchPreloadPlugin" },
+						{ "type": "sync", "name": "JavascriptModulesPlugin" },
+						{ "type": "sync", "name": "RuntimePlugin" },
+						{ "type": "sync", "name": "HotModuleReplacementPlugin" }
+					],
+					"interceptors": []
+				},
+				"runtimeRequirementInTree": { "_map": {}, "_interceptors": [] },
+				"runtimeModule": { "_args": ["module", "chunk"], "taps": [], "interceptors": [] },
+				"reviveModules": {
+					"_args": ["modules", "records"],
+					"taps": [{ "type": "sync", "name": "RecordIdsPlugin" }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"beforeModuleIds": {
+					"_args": ["modules"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"moduleIds": {
+					"_args": ["modules"],
+					"taps": [{ "type": "sync", "name": "NamedModuleIdsPlugin" }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"optimizeModuleIds": {
+					"_args": ["modules"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterOptimizeModuleIds": {
+					"_args": ["modules"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"reviveChunks": {
+					"_args": ["chunks", "records"],
+					"taps": [{ "type": "sync", "name": "RecordIdsPlugin" }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"beforeChunkIds": {
+					"_args": ["chunks"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"chunkIds": {
+					"_args": ["chunks"],
+					"taps": [{ "type": "sync", "name": "NamedChunkIdsPlugin" }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"optimizeChunkIds": {
+					"_args": ["chunks"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterOptimizeChunkIds": {
+					"_args": ["chunks"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"recordModules": {
+					"_args": ["modules", "records"],
+					"taps": [{ "type": "sync", "name": "RecordIdsPlugin" }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"recordChunks": {
+					"_args": ["chunks", "records"],
+					"taps": [{ "type": "sync", "name": "RecordIdsPlugin" }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"optimizeCodeGeneration": { "_args": ["modules"], "taps": [], "interceptors": [] },
+				"beforeModuleHash": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterModuleHash": { "_args": [], "taps": [], "interceptors": [] },
+				"beforeCodeGeneration": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterCodeGeneration": { "_args": [], "taps": [], "interceptors": [] },
+				"beforeRuntimeRequirements": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"afterRuntimeRequirements": { "_args": [], "taps": [], "interceptors": [] },
+				"beforeHash": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"contentHash": {
+					"_args": ["chunk"],
+					"taps": [{ "type": "sync", "name": "JavascriptModulesPlugin" }],
+					"interceptors": []
+				},
+				"afterHash": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"recordHash": {
+					"_args": ["records"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"record": {
+					"_args": ["compilation", "records"],
+					"taps": [{ "type": "sync", "name": "HotModuleReplacementPlugin" }],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"beforeModuleAssets": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"shouldGenerateChunkAssets": { "_args": [], "taps": [], "interceptors": [] },
+				"beforeChunkAssets": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"additionalChunkAssets": { "name": "additionalChunkAssets", "_fakeHook": true },
+				"additionalAssets": { "name": "additionalAssets", "_fakeHook": true },
+				"optimizeChunkAssets": { "name": "optimizeChunkAssets", "_fakeHook": true },
+				"afterOptimizeChunkAssets": {
+					"name": "afterOptimizeChunkAssets",
+					"_fakeHook": true
+				},
+				"optimizeAssets": {
+					"_args": ["assets"],
+					"taps": [
+						{ "type": "async", "name": "copy-webpack-plugin", "stage": -2000 },
+						{ "type": "async", "name": "HotModuleReplacementPlugin", "stage": -2000 },
+						{
+							"type": "async",
+							"name": "PersistentChildCompilerSingletonPlugin",
+							"stage": -2000
+						},
+						{ "type": "async", "name": "HtmlWebpackPlugin", "stage": 700 }
+					],
+					"interceptors": [
+						{ "name": "Compilation" },
+						{ "name": "ProgressPlugin" },
+						{ "name": "ProgressPlugin" }
+					]
+				},
+				"afterOptimizeAssets": {
+					"_args": ["assets"],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"processAdditionalAssets": { "_args": ["assets"], "taps": [], "interceptors": [] },
+				"needAdditionalSeal": { "_args": [], "taps": [], "interceptors": [] },
+				"afterSeal": {
+					"_args": [],
+					"taps": [],
+					"interceptors": [{ "name": "ProgressPlugin" }, { "name": "ProgressPlugin" }]
+				},
+				"renderManifest": {
+					"_args": ["result", "options"],
+					"taps": [
+						{ "type": "sync", "name": "JavascriptModulesPlugin" },
+						{ "type": "sync", "name": "AssetModulesPlugin" }
+					],
+					"interceptors": []
+				},
+				"fullHash": {
+					"_args": ["hash"],
+					"taps": [{ "type": "sync", "name": "HotModuleReplacementPlugin" }],
+					"interceptors": []
+				},
+				"chunkHash": {
+					"_args": ["chunk", "chunkHash", "ChunkHashContext"],
+					"taps": [{ "type": "sync", "name": "JavascriptModulesPlugin" }],
+					"interceptors": []
+				},
+				"moduleAsset": { "_args": ["module", "filename"], "taps": [], "interceptors": [] },
+				"chunkAsset": { "_args": ["chunk", "filename"], "taps": [], "interceptors": [] },
+				"assetPath": {
+					"_args": ["path", "options", "assetInfo"],
+					"taps": [{ "type": "sync", "name": "TemplatedPathPlugin" }],
+					"interceptors": []
+				},
+				"needAdditionalPass": { "_args": [], "taps": [], "interceptors": [] },
+				"childCompiler": {
+					"_args": ["childCompiler", "compilerName", "compilerIndex"],
+					"taps": [],
+					"interceptors": [],
+					"_x": []
+				},
+				"log": { "_args": ["origin", "logEntry"], "taps": [], "interceptors": [] },
+				"processWarnings": { "_args": ["warnings"], "taps": [], "interceptors": [] },
+				"processErrors": { "_args": ["errors"], "taps": [], "interceptors": [] },
+				"statsPreset": { "_map": {}, "_interceptors": [] },
+				"statsNormalize": {
+					"_args": ["options", "context"],
+					"taps": [{ "type": "sync", "name": "DefaultStatsPresetPlugin" }],
+					"interceptors": []
+				},
+				"statsFactory": {
+					"_args": ["statsFactory", "options"],
+					"taps": [{ "type": "sync", "name": "DefaultStatsFactoryPlugin" }],
+					"interceptors": []
+				},
+				"statsPrinter": {
+					"_args": ["statsPrinter", "options"],
+					"taps": [
+						{ "type": "sync", "name": "CopyPlugin" },
+						{ "type": "sync", "name": "DefaultStatsPrinterPlugin" }
+					],
+					"interceptors": []
+				},
+				"normalModuleLoader": {
+					"_args": ["loaderContext", "module"],
+					"taps": [
+						{ "type": "sync", "name": "vue-loader-plugin" },
+						{ "type": "sync", "name": "LoaderPlugin" },
+						{ "type": "sync", "name": "HotModuleReplacementPlugin" }
+					],
+					"interceptors": []
+				}
+			},
+			"fileSystemInfo": {
+				"logger": {},
+				"_remainingLogs": 40,
+				"_loggedPaths": {},
+				"_hashFunction": "md4",
+				"_snapshotCache": {},
+				"_fileTimestampsOptimization": {
+					"_useStartTime": true,
+					"_isSet": false,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_fileHashesOptimization": {
+					"_useStartTime": false,
+					"_isSet": false,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_fileTshsOptimization": {
+					"_useStartTime": true,
+					"_isSet": false,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_contextTimestampsOptimization": {
+					"_useStartTime": true,
+					"_isSet": false,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_contextHashesOptimization": {
+					"_useStartTime": false,
+					"_isSet": false,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_contextTshsOptimization": {
+					"_useStartTime": true,
+					"_isSet": false,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_missingExistenceOptimization": {
+					"_useStartTime": false,
+					"_isSet": false,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_managedItemInfoOptimization": {
+					"_useStartTime": false,
+					"_isSet": false,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_managedFilesOptimization": {
+					"_useStartTime": false,
+					"_isSet": true,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_managedContextsOptimization": {
+					"_useStartTime": false,
+					"_isSet": true,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_managedMissingOptimization": {
+					"_useStartTime": false,
+					"_isSet": true,
+					"_map": {},
+					"_statItemsShared": 0,
+					"_statItemsUnshared": 0,
+					"_statSharedSnapshots": 0,
+					"_statReusedSharedSnapshots": 0
+				},
+				"_fileTimestamps": { "map": {}, "stack": [] },
+				"_fileHashes": {},
+				"_fileTshs": {},
+				"_contextTimestamps": { "map": {}, "stack": [] },
+				"_contextHashes": {},
+				"_contextTshs": {},
+				"_managedItems": {},
+				"fileTimestampQueue": {
+					"_name": "file timestamp",
+					"_parallelism": 30,
+					"_entries": {},
+					"_queued": { "_list": [], "_listReversed": [] },
+					"_activeTasks": 0,
+					"_willEnsureProcessing": false,
+					"_needProcessing": false,
+					"_stopped": false,
+					"hooks": {
+						"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"result": {
+							"_args": ["item", "error", "result"],
+							"taps": [],
+							"interceptors": []
+						}
+					}
+				},
+				"fileHashQueue": {
+					"_name": "file hash",
+					"_parallelism": 10,
+					"_entries": {},
+					"_queued": { "_list": [], "_listReversed": [] },
+					"_activeTasks": 0,
+					"_willEnsureProcessing": false,
+					"_needProcessing": false,
+					"_stopped": false,
+					"hooks": {
+						"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"result": {
+							"_args": ["item", "error", "result"],
+							"taps": [],
+							"interceptors": []
+						}
+					}
+				},
+				"contextTimestampQueue": {
+					"_name": "context timestamp",
+					"_parallelism": 2,
+					"_entries": {},
+					"_queued": { "_list": [], "_listReversed": [] },
+					"_activeTasks": 0,
+					"_willEnsureProcessing": false,
+					"_needProcessing": false,
+					"_stopped": false,
+					"hooks": {
+						"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"result": {
+							"_args": ["item", "error", "result"],
+							"taps": [],
+							"interceptors": []
+						}
+					}
+				},
+				"contextHashQueue": {
+					"_name": "context hash",
+					"_parallelism": 2,
+					"_entries": {},
+					"_queued": { "_list": [], "_listReversed": [] },
+					"_activeTasks": 0,
+					"_willEnsureProcessing": false,
+					"_needProcessing": false,
+					"_stopped": false,
+					"hooks": {
+						"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"result": {
+							"_args": ["item", "error", "result"],
+							"taps": [],
+							"interceptors": []
+						}
+					}
+				},
+				"contextTshQueue": {
+					"_name": "context hash and timestamp",
+					"_parallelism": 2,
+					"_entries": {},
+					"_queued": { "_list": [], "_listReversed": [] },
+					"_activeTasks": 0,
+					"_willEnsureProcessing": false,
+					"_needProcessing": false,
+					"_stopped": false,
+					"hooks": {
+						"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"result": {
+							"_args": ["item", "error", "result"],
+							"taps": [],
+							"interceptors": []
+						}
+					}
+				},
+				"managedItemQueue": {
+					"_name": "managed item info",
+					"_parallelism": 10,
+					"_entries": {},
+					"_queued": { "_list": [], "_listReversed": [] },
+					"_activeTasks": 0,
+					"_willEnsureProcessing": false,
+					"_needProcessing": false,
+					"_stopped": false,
+					"hooks": {
+						"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"result": {
+							"_args": ["item", "error", "result"],
+							"taps": [],
+							"interceptors": []
+						}
+					}
+				},
+				"managedItemDirectoryQueue": {
+					"_name": "managed item directory info",
+					"_parallelism": 10,
+					"_entries": {},
+					"_queued": { "_list": [], "_listReversed": [] },
+					"_activeTasks": 0,
+					"_willEnsureProcessing": false,
+					"_needProcessing": false,
+					"_stopped": false,
+					"hooks": {
+						"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+						"result": {
+							"_args": ["item", "error", "result"],
+							"taps": [],
+							"interceptors": []
+						}
+					}
+				},
+				"managedPaths": ["/Users/weidian/test/vue-webpack/node_modules/"],
+				"managedPathsWithSlash": ["/Users/weidian/test/vue-webpack/node_modules/"],
+				"managedPathsRegExps": [],
+				"immutablePaths": [],
+				"immutablePathsWithSlash": [],
+				"immutablePathsRegExps": [],
+				"_warnAboutExperimentalEsmTracking": false,
+				"_statCreatedSnapshots": 0,
+				"_statTestedSnapshotsCached": 0,
+				"_statTestedSnapshotsNotCached": 0,
+				"_statTestedChildrenCached": 0,
+				"_statTestedChildrenNotCached": 0,
+				"_statTestedEntries": 0
+			},
+			"valueCacheVersions": {},
+			"compilerPath": "",
+			"logger": {},
+			"bail": false,
+			"profile": false,
+			"params": {
+				"normalModuleFactory": {
+					"hooks": {
+						"resolve": {
+							"_args": ["resolveData"],
+							"taps": [
+								{ "type": "async", "name": "NormalModuleFactory", "stage": 100 }
+							],
+							"interceptors": []
+						},
+						"resolveForScheme": { "_map": {}, "_interceptors": [] },
+						"resolveInScheme": { "_map": {}, "_interceptors": [] },
+						"factorize": {
+							"_args": ["resolveData"],
+							"taps": [
+								{ "type": "async", "name": "ExternalModuleFactoryPlugin" },
+								{ "type": "async", "name": "NormalModuleFactory", "stage": 100 }
+							],
+							"interceptors": []
+						},
+						"beforeResolve": {
+							"_args": ["resolveData"],
+							"taps": [],
+							"interceptors": []
+						},
+						"afterResolve": {
+							"_args": ["resolveData"],
+							"taps": [{ "type": "async", "name": "CaseSensitivePathsPlugin" }],
+							"interceptors": []
+						},
+						"createModule": {
+							"_args": ["createData", "resolveData"],
+							"taps": [],
+							"interceptors": []
+						},
+						"module": {
+							"_args": ["module", "createData", "resolveData"],
+							"taps": [
+								{ "type": "sync", "name": "SideEffectsFlagPlugin" },
+								{ "type": "sync", "name": "SideEffectsFlagPlugin" }
+							],
+							"interceptors": []
+						},
+						"createParser": { "_map": {}, "_interceptors": [] },
+						"parser": { "_map": {}, "_interceptors": [] },
+						"createGenerator": { "_map": {}, "_interceptors": [] },
+						"generator": { "_map": {}, "_interceptors": [] }
+					},
+					"ruleSet": { "references": {} },
+					"context": "/Users/weidian/test/vue-webpack",
+					"parserCache": {},
+					"generatorCache": {},
+					"_restoredUnsafeCacheEntries": {}
+				},
+				"contextModuleFactory": {
+					"hooks": {
+						"beforeResolve": { "_args": ["data"], "taps": [], "interceptors": [] },
+						"afterResolve": { "_args": ["data"], "taps": [], "interceptors": [] },
+						"contextModuleFiles": {
+							"_args": ["files"],
+							"taps": [],
+							"interceptors": []
+						},
+						"alternatives": { "name": "alternatives", "_fakeHook": true },
+						"alternativeRequests": {
+							"_args": ["modules", "options"],
+							"taps": [{ "type": "sync", "name": "RequireContextPlugin" }],
+							"interceptors": []
+						}
+					}
+				}
+			},
+			"mainTemplate": {
+				"hooks": {
+					"renderManifest": {},
+					"modules": {},
+					"moduleObj": {},
+					"require": {},
+					"beforeStartup": {},
+					"startup": {},
+					"afterStartup": {},
+					"render": {},
+					"renderWithEntry": {},
+					"assetPath": {},
+					"hash": {},
+					"hashForChunk": {},
+					"globalHashPaths": {},
+					"globalHash": {},
+					"hotBootstrap": {},
+					"bootstrap": {
+						"_args": [
+							"source",
+							"chunk",
+							"hash",
+							"moduleTemplate",
+							"dependencyTemplates"
+						],
+						"taps": [],
+						"interceptors": []
+					},
+					"localVars": {
+						"_args": ["source", "chunk", "hash"],
+						"taps": [],
+						"interceptors": []
+					},
+					"requireExtensions": {
+						"_args": ["source", "chunk", "hash"],
+						"taps": [],
+						"interceptors": []
+					},
+					"requireEnsure": {
+						"_args": ["source", "chunk", "hash", "chunkIdExpression"],
+						"taps": [],
+						"interceptors": []
+					},
+					"jsonpScript": {
+						"_args": ["source", "chunk"],
+						"taps": [],
+						"interceptors": []
+					},
+					"linkPrefetch": {
+						"_args": ["source", "chunk"],
+						"taps": [],
+						"interceptors": []
+					},
+					"linkPreload": { "_args": ["source", "chunk"], "taps": [], "interceptors": [] }
+				}
+			},
+			"chunkTemplate": {
+				"hooks": {
+					"renderManifest": {},
+					"modules": {},
+					"render": {},
+					"renderWithEntry": {},
+					"hash": {},
+					"hashForChunk": {}
+				}
+			},
+			"runtimeTemplate": {
+				"globalObject": "self",
+				"contentHashReplacement": "XXXXXXXXXXXXXXXXXXXX"
+			},
+			"moduleTemplates": {
+				"javascript": {
+					"type": "javascript",
+					"hooks": {
+						"content": {},
+						"module": {},
+						"render": {},
+						"package": {},
+						"hash": {}
+					}
+				}
+			},
+			"moduleGraph": { "_dependencyMap": {}, "_moduleMap": {}, "_metaMap": {} },
+			"processDependenciesQueue": {
+				"_name": "processDependencies",
+				"_parallelism": 100,
+				"_entries": {},
+				"_queued": { "_list": [], "_listReversed": [] },
+				"_children": [
+					{
+						"_name": "addModule",
+						"_parallelism": 1,
+						"_entries": {},
+						"_queued": { "_list": [], "_listReversed": [] },
+						"_activeTasks": 0,
+						"_willEnsureProcessing": false,
+						"_needProcessing": false,
+						"_stopped": false,
+						"hooks": {
+							"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+							"added": {
+								"_args": ["item"],
+								"taps": [
+									{ "type": "sync", "name": "ProgressPlugin" },
+									{ "type": "sync", "name": "ProgressPlugin" }
+								],
+								"interceptors": []
+							},
+							"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+							"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+							"result": {
+								"_args": ["item", "error", "result"],
+								"taps": [],
+								"interceptors": []
+							}
+						}
+					},
+					{
+						"_name": "factorize",
+						"_parallelism": 1,
+						"_entries": {},
+						"_queued": {
+							"_list": [
+								{
+									"item": {
+										"dependencies": [
+											{
+												"_parentDependenciesBlockIndex": -1,
+												"weak": false,
+												"optional": false,
+												"_locSL": 0,
+												"_locSC": 0,
+												"_locEL": 0,
+												"_locEC": 0,
+												"_locN": "app",
+												"_loc": { "name": "app" },
+												"request": "/Users/weidian/test/vue-webpack/src/main.js",
+												"userRequest": "/Users/weidian/test/vue-webpack/src/main.js"
+											}
+										],
+										"factoryResult": true,
+										"originModule": null,
+										"context": "/Users/weidian/test/vue-webpack"
+									},
+									"state": 0
+								},
+								{
+									"item": {
+										"dependencies": [
+											{
+												"_parentDependenciesBlockIndex": -1,
+												"weak": false,
+												"optional": false,
+												"_locSL": 0,
+												"_locSC": 0,
+												"_locEL": 0,
+												"_locEC": 0,
+												"_loc": {},
+												"request": "/Users/weidian/test/vue-webpack/node_modules/.pnpm/webpack-dev-server@4.9.3_ed7de2690da194b35567e1e94055cb2c/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=8081&pathname=%2Fws&logging=none&reconnect=10",
+												"userRequest": "/Users/weidian/test/vue-webpack/node_modules/.pnpm/webpack-dev-server@4.9.3_ed7de2690da194b35567e1e94055cb2c/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=8081&pathname=%2Fws&logging=none&reconnect=10"
+											}
+										],
+										"factoryResult": true,
+										"originModule": null,
+										"context": "/Users/weidian/test/vue-webpack"
+									},
+									"state": 0
+								},
+								{
+									"item": {
+										"dependencies": [
+											{
+												"_parentDependenciesBlockIndex": -1,
+												"weak": false,
+												"optional": false,
+												"_locSL": 0,
+												"_locSC": 0,
+												"_locEL": 0,
+												"_locEC": 0,
+												"_loc": {},
+												"request": "/Users/weidian/test/vue-webpack/node_modules/.pnpm/webpack@5.74.0_webpack-cli@4.10.0/node_modules/webpack/hot/dev-server.js",
+												"userRequest": "/Users/weidian/test/vue-webpack/node_modules/.pnpm/webpack@5.74.0_webpack-cli@4.10.0/node_modules/webpack/hot/dev-server.js"
+											}
+										],
+										"factoryResult": true,
+										"originModule": null,
+										"context": "/Users/weidian/test/vue-webpack"
+									},
+									"state": 0
+								}
+							],
+							"_listReversed": []
+						},
+						"_activeTasks": 0,
+						"_willEnsureProcessing": false,
+						"_needProcessing": false,
+						"_stopped": false,
+						"hooks": {
+							"beforeAdd": {
+								"_args": ["item"],
+								"taps": [],
+								"interceptors": [],
+								"_x": []
+							},
+							"added": {
+								"_args": ["item"],
+								"taps": [
+									{ "type": "sync", "name": "ProgressPlugin" },
+									{ "type": "sync", "name": "ProgressPlugin" }
+								],
+								"interceptors": [],
+								"_x": [null, null]
+							},
+							"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+							"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+							"result": {
+								"_args": ["item", "error", "result"],
+								"taps": [
+									{ "type": "sync", "name": "ProgressPlugin" },
+									{ "type": "sync", "name": "ProgressPlugin" }
+								],
+								"interceptors": []
+							}
+						}
+					},
+					{
+						"_name": "build",
+						"_parallelism": 1,
+						"_entries": {},
+						"_queued": { "_list": [], "_listReversed": [] },
+						"_activeTasks": 0,
+						"_willEnsureProcessing": false,
+						"_needProcessing": false,
+						"_stopped": false,
+						"hooks": {
+							"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+							"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+							"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+							"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+							"result": {
+								"_args": ["item", "error", "result"],
+								"taps": [],
+								"interceptors": []
+							}
+						}
+					}
+				],
+				"_activeTasks": 0,
+				"_willEnsureProcessing": true,
+				"_needProcessing": true,
+				"_stopped": false,
+				"hooks": {
+					"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+					"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+					"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+					"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+					"result": {
+						"_args": ["item", "error", "result"],
+						"taps": [
+							{ "type": "sync", "name": "ProgressPlugin" },
+							{ "type": "sync", "name": "ProgressPlugin" }
+						],
+						"interceptors": []
+					}
+				}
+			},
+			"rebuildQueue": {
+				"_name": "rebuild",
+				"_parallelism": 100,
+				"_entries": {},
+				"_queued": { "_list": [], "_listReversed": [] },
+				"_activeTasks": 0,
+				"_willEnsureProcessing": false,
+				"_needProcessing": false,
+				"_stopped": false,
+				"hooks": {
+					"beforeAdd": { "_args": ["item"], "taps": [], "interceptors": [] },
+					"added": { "_args": ["item"], "taps": [], "interceptors": [] },
+					"beforeStart": { "_args": ["item"], "taps": [], "interceptors": [] },
+					"started": { "_args": ["item"], "taps": [], "interceptors": [] },
+					"result": {
+						"_args": ["item", "error", "result"],
+						"taps": [],
+						"interceptors": []
+					}
+				}
+			},
+			"creatingModuleDuringBuild": {},
+			"entries": {},
+			"globalEntry": {
+				"dependencies": [null, null],
+				"includeDependencies": [],
+				"options": {}
+			},
+			"entrypoints": {},
+			"asyncEntrypoints": [],
+			"chunks": {},
+			"chunkGroups": [],
+			"namedChunkGroups": {},
+			"namedChunks": {},
+			"modules": {},
+			"_modules": {},
+			"additionalChunkAssets": [],
+			"assets": {},
+			"assetsInfo": {},
+			"_assetsRelatedIn": {},
+			"errors": [],
+			"warnings": [],
+			"children": [],
+			"logging": {},
+			"dependencyFactories": {},
+			"dependencyTemplates": {
+				"_map": {},
+				"_hash": "31d6cfe0d16ae931b73c59d7e0c089c0",
+				"_hashFunction": "md4"
+			},
+			"childrenCounters": { "HtmlWebpackCompiler": 1 },
+			"usedChunkIds": null,
+			"usedModuleIds": null,
+			"needAdditionalPass": false,
+			"_restoredUnsafeCacheModuleEntries": {},
+			"_restoredUnsafeCacheEntries": {},
+			"builtModules": {},
+			"codeGeneratedModules": {},
+			"buildTimeExecutedModules": {},
+			"_rebuildingModules": {},
+			"emittedAssets": {},
+			"comparedForEmitAssets": {},
+			"fileDependencies": {
+				"_set": {},
+				"_toMerge": {},
+				"_toDeepMerge": [],
+				"_needMerge": false,
+				"_deopt": false
+			},
+			"contextDependencies": {
+				"_set": {},
+				"_toMerge": {},
+				"_toDeepMerge": [],
+				"_needMerge": false,
+				"_deopt": false
+			},
+			"missingDependencies": {
+				"_set": {},
+				"_toMerge": {},
+				"_toDeepMerge": [],
+				"_needMerge": false,
+				"_deopt": false
+			},
+			"buildDependencies": {
+				"_set": {},
+				"_toMerge": {},
+				"_toDeepMerge": [],
+				"_needMerge": true,
+				"_deopt": false
+			},
+			"compilationDependencies": {},
+			"_modulesCache": { "_name": "Compilation/modules", "_hashFunction": "md4" },
+			"_assetsCache": { "_name": "Compilation/assets", "_hashFunction": "md4" },
+			"_codeGenerationCache": {
+				"_name": "Compilation/codeGeneration",
+				"_hashFunction": "md4"
+			},
+			"_unsafeCache": true
+		},
+		"_assetEmittingSourceCache": {},
+		"_assetEmittingWrittenFiles": {},
+		"_assetEmittingPreviousFiles": {}
+	},
+	"logger": {},
+	"options": {
+		"static": [
+			{
+				"directory": "/Users/weidian/test/vue-webpack/public",
+				"staticOptions": {},
+				"publicPath": ["/"],
+				"serveIndex": { "icons": true },
+				"watch": {
+					"ignoreInitial": true,
+					"persistent": true,
+					"followSymlinks": false,
+					"atomic": false,
+					"alwaysStat": true,
+					"ignorePermissionErrors": true,
+					"usePolling": false
+				}
+			}
+		],
+		"compress": true,
+		"open": [{ "target": "<url>", "options": { "wait": false } }],
+		"allowedHosts": "auto",
+		"bonjour": false,
+		"devMiddleware": {},
+		"historyApiFallback": false,
+		"hot": true,
+		"server": { "type": "http", "options": {} },
+		"liveReload": true,
+		"magicHtml": true,
+		"setupExitSignals": true,
+		"watchFiles": [],
+		"webSocketServer": { "type": "ws", "options": { "path": "/ws" } },
+		"port": 8081
+	},
+	"staticWatchers": [
+		{
+			"_events": {},
+			"_eventsCount": 1,
+			"_watched": {},
+			"_closers": {},
+			"_ignoredPaths": {},
+			"_throttled": {},
+			"_symlinkPaths": {},
+			"_streams": {},
+			"closed": false,
+			"_readyEmitted": false,
+			"options": {
+				"ignoreInitial": true,
+				"persistent": true,
+				"followSymlinks": false,
+				"atomic": false,
+				"alwaysStat": true,
+				"ignorePermissionErrors": true,
+				"usePolling": false,
+				"interval": 100,
+				"binaryInterval": 300,
+				"disableGlobbing": false,
+				"enableBinaryInterval": true,
+				"useFsEvents": true,
+				"awaitWriteFinish": false
+			},
+			"_fsEventsHandler": {},
+			"_readyCount": 2
+		}
+	],
+	"listeners": [{ "name": "SIGINT" }, { "name": "SIGTERM" }],
+	"webSocketProxies": [],
+	"sockets": [],
+	"server": {
+		"_events": { "connection": [null, null] },
+		"_eventsCount": 4,
+		"_connections": 0,
+		"_handle": { "reading": false },
+		"_usingWorkers": false,
+		"_workers": [],
+		"_unref": false,
+		"allowHalfOpen": true,
+		"pauseOnConnect": false,
+		"httpAllowHalfOpen": false,
+		"timeout": 0,
+		"keepAliveTimeout": 5000,
+		"maxHeadersCount": null,
+		"maxRequestsPerSocket": 0,
+		"headersTimeout": 60000,
+		"requestTimeout": 0,
+		"_connectionKey": "6::::8081"
+	},
+	"webSocketServer": {
+		"clients": [],
+		"implementation": {
+			"_events": { "connection": [null, null] },
+			"_eventsCount": 3,
+			"options": {
+				"maxPayload": 104857600,
+				"skipUTF8Validation": false,
+				"perMessageDeflate": false,
+				"handleProtocols": null,
+				"clientTracking": false,
+				"verifyClient": null,
+				"noServer": true,
+				"backlog": null,
+				"server": null,
+				"host": null,
+				"path": "/ws",
+				"port": null
+			},
+			"_state": 0
+		}
+	}
+}
