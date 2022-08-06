@@ -150,7 +150,8 @@ export const getBaseConfig = (isProd = false) => {
 						]
 					}
 				})
-			]
+			],
+			runtimeChunk: 'single'
 		},
 		plugins: [
 			new WebpackBar(),
