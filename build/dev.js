@@ -12,6 +12,7 @@ const devConfig = merge(baseconfig, {
 	devtool: 'eval-cheap-module-source-map',
 	mode: 'development',
 	devServer: {
+		historyApiFallback: true,
 		static: {
 			directory: publicDir
 		},

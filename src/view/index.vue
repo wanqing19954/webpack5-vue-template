@@ -13,7 +13,7 @@ export default {
 
 	data() {
 		return {
-			title: '你好world2'
+			title: '你好world2333'
 		}
 	},
 	mounted() {
