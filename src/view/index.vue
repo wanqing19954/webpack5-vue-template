@@ -13,7 +13,7 @@ export default {
 
 	data() {
 		return {
-			title: '你好world2333'
+			title: '测试docker缓存'
 		}
 	},
 	mounted() {

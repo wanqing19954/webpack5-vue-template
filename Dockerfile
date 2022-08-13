@@ -9,7 +9,7 @@ RUN pnpm fetch --prod
 
 COPY ./ /app
 WORKDIR /app
-RUN npm install && npm run build
+RUN pnpm install && pnpm build
 
 FROM nginx
 RUN mkdir /app
