@@ -9,6 +9,9 @@ import address from 'address'
 const baseconfig = getBaseConfig()
 
 const devConfig = merge(baseconfig, {
+	experiments: {
+		lazyCompilation: true
+	},
 	devtool: 'eval-cheap-module-source-map',
 	mode: 'development',
 	devServer: {

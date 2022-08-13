@@ -20,9 +20,6 @@ export const publicDir = path.resolve(root, 'public')
 
 export const getBaseConfig = (isProd = false) => {
 	const webpackConfig = {
-		experiments: {
-			lazyCompilation: true
-		},
 		infrastructureLogging: { level: 'error' },
 		stats: 'errors-only',
 		cache: {

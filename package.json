@@ -6,7 +6,8 @@
 	"scripts": {
 		"v": "node build/dev.js",
 		"build": "NODE_ENV=production node build/build.js",
-		"d": "docker build . -t my-app"
+		"d": "docker build . -t my-app",
+		"p": "docker run -d -p 8090:80 my-app"
 	},
 	"keywords": [],
 	"author": "",
