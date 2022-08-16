@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"v": "node build/dev.js",
-		"build": "NODE_ENV=production node build/build.js",
+		"b": "NODE_ENV=production node build/build.js",
 		"d": "docker build . -t my-app",
 		"p": "docker run -d -p 8090:80 my-app"
 	},
@@ -15,6 +15,10 @@
 	"type": "module",
 	"devDependencies": {
 		"@babel/preset-env": "^7.18.10",
+		"@eslint/create-config": "^0.3.0",
+		"@types/webpack": "^5.28.0",
+		"@typescript-eslint/eslint-plugin": "^5.33.0",
+		"@typescript-eslint/parser": "^5.33.0",
 		"address": "^1.2.0",
 		"babel-loader": "^8.2.5",
 		"case-sensitive-paths-webpack-plugin": "^2.4.0",
@@ -23,6 +27,12 @@
 		"cliui": "^7.0.4",
 		"copy-webpack-plugin": "^11.0.0",
 		"css-minimizer-webpack-plugin": "^4.0.0",
+		"eslint": "^8.0.1",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-n": "^15.0.0",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-vue": "^9.3.0",
 		"html-webpack-plugin": "^5.5.0",
 		"mini-css-extract-plugin": "^2.6.1",
 		"ora": "^6.1.2",

@@ -10,8 +10,9 @@ import CopyPlugin from 'copy-webpack-plugin'
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import WebpackBar from 'webpackbar'
-
 const { DefinePlugin } = webpack
+import HelloPlugin from './plugins/hello-plugin.js'
+
 const _dirname = fileURLToPath(import.meta.url)
 export const root = path.resolve(_dirname, '..', '..')
 export const srcDir = path.resolve(root, 'src')
@@ -154,6 +155,7 @@ export const getBaseConfig = (isProd = false) => {
 			runtimeChunk: 'single'
 		},
 		plugins: [
+			new HelloPlugin(),
 			new WebpackBar(),
 			new VueLoaderPlugin(),
 			new DefinePlugin({
