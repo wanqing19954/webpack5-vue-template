@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"v": "node build/dev.js",
-		"b": "NODE_ENV=production node build/build.js",
+		"build": "NODE_ENV=production node build/build.js",
 		"d": "docker build . -t my-app",
 		"p": "docker run -d -p 8090:80 my-app"
 	},
@@ -45,6 +45,7 @@
 		"sass-loader": "^13.0.2",
 		"strip-ansi": "^7.0.1",
 		"terser-webpack-plugin": "5.1.1",
+		"typescript": "^4.7.4",
 		"vue-style-loader": "^4.1.3",
 		"vue-template-compiler": "^2.7.8",
 		"webpack": "^5.74.0",
