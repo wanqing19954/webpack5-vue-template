@@ -1,15 +1,15 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router';
+import VueRouter from 'vue-router'
 import Index from '../view/index.vue'
 
 Vue.use(VueRouter)
 
-const router = new VueRouter({
-  mode: "history",
+export default new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      component: Index,
+      component: Index
     },
     {
       path: '/index',
@@ -17,5 +17,3 @@ const router = new VueRouter({
     }
   ]
 })
-
-export default router
