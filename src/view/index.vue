@@ -13,12 +13,13 @@ export default {
 
 	data() {
 		return {
-			title: '测试docker缓存'
+			a: '测试docker缓存',
+			name: '',
 		}
 	},
 	mounted() {
 		this.a = arr1.includes(3) && 3
-	}
+	},
 }
 </script>
 
