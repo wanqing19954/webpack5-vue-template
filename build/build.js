@@ -9,28 +9,32 @@ import chalk from 'chalk'
 const baseconfig = getBaseConfig(true)
 
 const prodConfig = merge(baseconfig, {
-  mode: 'production',
-  plugins: [
-    // new fileListPlugin({
-    // outputFile: 'my-assets.md'
-    // })
-    // new FileMapPlugin()
-  ]
+	mode: 'production',
+	plugins: [
+		// new fileListPlugin({
+		// outputFile: 'my-assets.md'
+		// })
+		// new FileMapPlugin()
+	],
 })
 webpack(prodConfig, (err, stats) => {
-  if (err) {
-    throw err
-  }
-  if (stats.hasErrors()) {
-    console.log('stats', stats)
-    throw new Error('Build failed with errors.')
-  }
+	if (err) {
+		throw err
+	}
+	if (stats.hasErrors()) {
+		console.log('stats', stats)
+		throw new Error('Build failed with errors.')
+	}
 
-  log(formatStats(stats, distDir))
+	log(formatStats(stats, distDir))
 
-  done('Build complete. The dist directory is ready to be deployed.')
+	done('Build complete. The dist directory is ready to be deployed.')
 
-  info(`Check out deployment instructions at ${chalk.cyan('https://cli.vuejs.org/guide/deployment.html')}\n`)
+	info(
+		`Check out deployment instructions at ${chalk.cyan(
+			'https://cli.vuejs.org/guide/deployment.html'
+		)}\n`
+	)
 
-  console.log('Build complete.')
+	console.log('Build complete.')
 })
