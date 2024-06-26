@@ -5,11 +5,12 @@
 	"main": "index.js",
 	"scripts": {
 		"v": "node build/dev.js",
-		"build": "rsbuild build",
 		"d": "docker build . -t my-app",
 		"p": "docker run -d -p 8090:80 my-app",
-		"preview": "http-server ./dist",
-		"dev": "rsbuild dev"
+		"preview1": "http-server ./dist",
+		"dev": "rsbuild dev",
+		"build": "rsbuild build",
+		"preview": "rsbuild preview"
 	},
 	"keywords": [],
 	"author": "",
