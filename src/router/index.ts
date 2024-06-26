@@ -12,7 +12,7 @@ export default new VueRouter({
 			component: Index,
 		},
 		{
-			path: '/index',
+			path: '/hello',
 			component: () => import('../components/HelloWorld.vue'),
 		},
 	],

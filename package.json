@@ -5,10 +5,11 @@
 	"main": "index.js",
 	"scripts": {
 		"v": "node build/dev.js",
-		"build": "NODE_ENV=production node build/build.js",
+		"build": "rsbuild build",
 		"d": "docker build . -t my-app",
 		"p": "docker run -d -p 8090:80 my-app",
-		"preview": "http-server ./dist"
+		"preview": "http-server ./dist",
+		"dev": "rsbuild dev"
 	},
 	"keywords": [],
 	"author": "",
@@ -17,6 +18,9 @@
 	"devDependencies": {
 		"@babel/preset-env": "^7.18.10",
 		"@eslint/create-config": "^0.3.0",
+		"@rsbuild/core": "^0.7.10",
+		"@rsbuild/plugin-sass": "^0.7.10",
+		"@rsbuild/plugin-vue2": "^0.7.10",
 		"@types/webpack": "^5.28.0",
 		"@types/webpack-env": "^1.18.0",
 		"@typescript-eslint/eslint-plugin": "^5.33.0",

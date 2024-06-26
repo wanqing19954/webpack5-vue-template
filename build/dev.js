@@ -26,15 +26,14 @@ const devConfig = merge(baseconfig, {
 			overlay: { warnings: false, errors: true },
 			progress: true,
 		},
-		http2: true,
-		host: 'local.weidian',
-		server: {
-			type: 'spdy',
-			options: {
-				key: fs.readFileSync(`${root}/local.weidian-key.pem`),
-				cert: fs.readFileSync(`${root}/local.weidian.pem`),
-			},
-		},
+		// host: 'local.weidian',
+		// server: {
+		// 	type: 'spdy',
+		// 	options: {
+		// 		key: fs.readFileSync(`${root}/local.weidian-key.pem`),
+		// 		cert: fs.readFileSync(`${root}/local.weidian.pem`),
+		// 	},
+		// },
 	},
 })
 
